@@ -43,12 +43,27 @@ def dividir(a, b):
 
 def promedio(lista_numeros):
     """Calcula el promedio de una lista de números."""
+
+    if not lista_numeros:
+        logging.warning(
+            "INC-002 - No se puede calcular el promedio de una lista vacía"
+        )
+        return None
+
     total = 0
 
     for n in lista_numeros:
         total += n
 
-    return total / len(lista_numeros)
+    resultado = total / len(lista_numeros)
+
+    logging.info(
+        "Promedio calculado correctamente. cantidad=%s, resultado=%s",
+        len(lista_numeros),
+        resultado
+    )
+
+    return resultado
 
 
 def obtener_elemento(lista, indice):
@@ -90,11 +105,16 @@ def main():
 
     try:
         datos = []
-        print("Promedio:", promedio(datos))
+        resultado_promedio = promedio(datos)
+
+        if resultado_promedio is None:
+            print("No se puede calcular el promedio de una lista vacía.")
+        else:
+            print("Promedio:", resultado_promedio)
 
     except Exception as error:
         logging.error(
-            "INC-002 - Error al calcular el promedio: %s",
+            "INC-002 - Error inesperado al calcular el promedio: %s",
             str(error)
         )
 
