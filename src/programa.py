@@ -68,8 +68,24 @@ def promedio(lista_numeros):
 
 def obtener_elemento(lista, indice):
     """Devuelve un elemento de la lista según el índice indicado."""
-    return lista[indice]
 
+    if indice < 0 or indice >= len(lista):
+        logging.warning(
+            "INC-003 - Índice fuera de rango. indice=%s, longitud=%s",
+            indice,
+            len(lista)
+        )
+        return None
+
+    elemento = lista[indice]
+
+    logging.info(
+        "Elemento obtenido correctamente. indice=%s, valor=%s",
+        indice,
+        elemento
+    )
+
+    return elemento
 
 def calcular_total(precios):
     """Suma los precios de una lista."""
@@ -125,11 +141,16 @@ def main():
 
     try:
         lista = [1, 2, 3]
-        print("Elemento:", obtener_elemento(lista, 5))
+        resultado_elemento = obtener_elemento(lista, 5)
+
+        if resultado_elemento is None:
+            print("El índice solicitado está fuera del rango de la lista.")
+        else:
+            print("Elemento:", resultado_elemento)
 
     except Exception as error:
         logging.error(
-            "INC-003 - Error al obtener el elemento de la lista: %s",
+            "INC-003 - Error inesperado al obtener el elemento: %s",
             str(error)
         )
 

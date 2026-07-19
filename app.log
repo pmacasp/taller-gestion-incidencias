@@ -1,25 +1,15 @@
-2026-07-19 09:37:05 - INFO - Inicio del programa
-2026-07-19 09:37:05 - WARNING - INC-001 - Intento de división entre cero. a=10, b=0
-2026-07-19 09:37:05 - WARNING - INC-002 - No se puede calcular el promedio de una lista vacía
-2026-07-19 09:37:05 - ERROR - INC-003 - Error al obtener el elemento de la lista: list index out of range
-2026-07-19 09:37:05 - ERROR - Detalle de la excepción:
+2026-07-19 09:42:02 - INFO - Inicio del programa
+2026-07-19 09:42:02 - WARNING - INC-001 - Intento de división entre cero. a=10, b=0
+2026-07-19 09:42:02 - WARNING - INC-002 - No se puede calcular el promedio de una lista vacía
+2026-07-19 09:42:02 - WARNING - INC-003 - Índice fuera de rango. indice=5, longitud=3
+2026-07-19 09:42:02 - CRITICAL - INC-004 - Error al calcular el total de precios: unsupported operand type(s) for +=: 'int' and 'str'
+2026-07-19 09:42:02 - CRITICAL - Detalle de la excepción:
 Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 128, in main
-    print("Elemento:", obtener_elemento(lista, 5))
-                       ~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 71, in obtener_elemento
-    return lista[indice]
-           ~~~~~^^^^^^^^
-IndexError: list index out of range
-
-2026-07-19 09:37:05 - CRITICAL - INC-004 - Error al calcular el total de precios: unsupported operand type(s) for +=: 'int' and 'str'
-2026-07-19 09:37:05 - CRITICAL - Detalle de la excepción:
-Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 143, in main
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 164, in main
     print("Total de precios:", calcular_total(precios))
                                ~~~~~~~~~~~~~~^^^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 79, in calcular_total
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 95, in calcular_total
     total += p
 TypeError: unsupported operand type(s) for +=: 'int' and 'str'
 
-2026-07-19 09:37:05 - INFO - Fin del programa
+2026-07-19 09:42:02 - INFO - Fin del programa
