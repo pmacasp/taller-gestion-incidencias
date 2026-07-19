@@ -89,10 +89,23 @@ def obtener_elemento(lista, indice):
 
 def calcular_total(precios):
     """Suma los precios de una lista."""
+
     total = 0
 
     for p in precios:
+        if not isinstance(p, (int, float)):
+            logging.error(
+                "INC-004 - Valor no numérico detectado en precios. valor=%s",
+                p
+            )
+            return None
+
         total += p
+
+    logging.info(
+        "Total de precios calculado correctamente. total=%s",
+        total
+    )
 
     return total
 
@@ -161,15 +174,23 @@ def main():
 
     try:
         precios = [10, 20, "treinta", 40]
-        print("Total de precios:", calcular_total(precios))
+        resultado_total = calcular_total(precios)
+
+        if resultado_total is None:
+            print(
+                "No se pudo calcular el total porque existe "
+                "un valor no numérico en la lista de precios."
+            )
+        else:
+            print("Total de precios:", resultado_total)
 
     except Exception as error:
-        logging.critical(
-            "INC-004 - Error al calcular el total de precios: %s",
+        logging.error(
+            "INC-004 - Error inesperado al calcular el total: %s",
             str(error)
         )
 
-        logging.critical(
+        logging.error(
             "Detalle de la excepción:\n%s",
             traceback.format_exc()
         )
