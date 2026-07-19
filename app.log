@@ -1,79 +1,35 @@
-2026-07-19 08:47:15 - INFO - Inicio del programa
-2026-07-19 08:47:15 - ERROR - INC-001 - Error en la división: division by zero
-2026-07-19 08:47:15 - ERROR - Detalle de la excepción:
+2026-07-19 09:32:15 - INFO - Inicio del programa
+2026-07-19 09:32:15 - WARNING - INC-001 - Intento de división entre cero. a=10, b=0
+2026-07-19 09:32:15 - ERROR - INC-002 - Error al calcular el promedio: division by zero
+2026-07-19 09:32:15 - ERROR - Detalle de la excepción:
 Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 53, in main
-    resultado_div = dividir(10, 0)
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 21, in dividir
-    return a / b
-           ~~^~~
-ZeroDivisionError: division by zero
-
-2026-07-19 08:47:15 - ERROR - INC-002 - Error al calcular el promedio: division by zero
-2026-07-19 08:47:15 - ERROR - Detalle de la excepción:
-Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 69, in main
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 93, in main
     print("Promedio:", promedio(datos))
                        ~~~~~~~~^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 31, in promedio
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 51, in promedio
     return total / len(lista_numeros)
            ~~~~~~^~~~~~~~~~~~~~~~~~~~
 ZeroDivisionError: division by zero
 
-2026-07-19 08:47:15 - ERROR - INC-003 - Error al obtener el elemento de la lista: list index out of range
-2026-07-19 08:47:15 - ERROR - Detalle de la excepción:
+2026-07-19 09:32:15 - ERROR - INC-003 - Error al obtener el elemento de la lista: list index out of range
+2026-07-19 09:32:15 - ERROR - Detalle de la excepción:
 Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 84, in main
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 108, in main
     print("Elemento:", obtener_elemento(lista, 5))
                        ~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 36, in obtener_elemento
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 56, in obtener_elemento
     return lista[indice]
            ~~~~~^^^^^^^^
 IndexError: list index out of range
 
-2026-07-19 08:47:15 - CRITICAL - INC-004 - Error al calcular el total de precios: unsupported operand type(s) for +=: 'int' and 'str'
-2026-07-19 08:47:15 - CRITICAL - Detalle de la excepción:
+2026-07-19 09:32:15 - CRITICAL - INC-004 - Error al calcular el total de precios: unsupported operand type(s) for +=: 'int' and 'str'
+2026-07-19 09:32:15 - CRITICAL - Detalle de la excepción:
 Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 99, in main
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 123, in main
     print("Total de precios:", calcular_total(precios))
                                ~~~~~~~~~~~~~~^^^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 44, in calcular_total
+  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 64, in calcular_total
     total += p
 TypeError: unsupported operand type(s) for +=: 'int' and 'str'
 
-2026-07-19 08:47:15 - INFO - Fin del programa
-2026-07-19 09:18:27 - INFO - Inicio del programa
-2026-07-19 09:18:27 - WARNING - INC-001 - Intento de división entre cero. a=10, b=0
-2026-07-19 09:18:27 - ERROR - INC-002 - Error al calcular el promedio: division by zero
-2026-07-19 09:18:27 - ERROR - Detalle de la excepción:
-Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 91, in main
-    print("Promedio:", promedio(datos))
-                       ~~~~~~~~^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 49, in promedio
-    return total / len(lista_numeros)
-           ~~~~~~^~~~~~~~~~~~~~~~~~~~
-ZeroDivisionError: division by zero
-
-2026-07-19 09:18:27 - ERROR - INC-003 - Error al obtener el elemento de la lista: list index out of range
-2026-07-19 09:18:27 - ERROR - Detalle de la excepción:
-Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 106, in main
-    print("Elemento:", obtener_elemento(lista, 5))
-                       ~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 54, in obtener_elemento
-    return lista[indice]
-           ~~~~~^^^^^^^^
-IndexError: list index out of range
-
-2026-07-19 09:18:27 - CRITICAL - INC-004 - Error al calcular el total de precios: unsupported operand type(s) for +=: 'int' and 'str'
-2026-07-19 09:18:27 - CRITICAL - Detalle de la excepción:
-Traceback (most recent call last):
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 121, in main
-    print("Total de precios:", calcular_total(precios))
-                               ~~~~~~~~~~~~~~^^^^^^^^^
-  File "C:\Automatizacion\taller-gestion-incidencias\src\programa.py", line 62, in calcular_total
-    total += p
-TypeError: unsupported operand type(s) for +=: 'int' and 'str'
-
-2026-07-19 09:18:27 - INFO - Fin del programa
+2026-07-19 09:32:15 - INFO - Fin del programa
