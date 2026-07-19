@@ -114,7 +114,7 @@ def main():
     logging.info("Inicio del programa")
 
     try:
-        resultado_div = dividir(10, 0)
+        resultado_div = dividir(10, 2)
 
         if resultado_div is None:
             print("No se puede realizar una división entre cero.")
@@ -133,7 +133,7 @@ def main():
         )
 
     try:
-        datos = []
+        datos = [8,9,10]
         resultado_promedio = promedio(datos)
 
         if resultado_promedio is None:
@@ -154,7 +154,7 @@ def main():
 
     try:
         lista = [1, 2, 3]
-        resultado_elemento = obtener_elemento(lista, 5)
+        resultado_elemento = obtener_elemento(lista, 1)
 
         if resultado_elemento is None:
             print("El índice solicitado está fuera del rango de la lista.")
@@ -173,7 +173,7 @@ def main():
         )
 
     try:
-        precios = [10, 20, "treinta", 40]
+        precios = [10, 20, 10, 40]
         resultado_total = calcular_total(precios)
 
         if resultado_total is None:

@@ -1,6 +1,6 @@
-2026-07-19 09:48:22 - INFO - Inicio del programa
-2026-07-19 09:48:22 - WARNING - INC-001 - Intento de división entre cero. a=10, b=0
-2026-07-19 09:48:22 - WARNING - INC-002 - No se puede calcular el promedio de una lista vacía
-2026-07-19 09:48:22 - WARNING - INC-003 - Índice fuera de rango. indice=5, longitud=3
-2026-07-19 09:48:22 - ERROR - INC-004 - Valor no numérico detectado en precios. valor=treinta
-2026-07-19 09:48:22 - INFO - Fin del programa
+2026-07-19 09:52:13 - INFO - Inicio del programa
+2026-07-19 09:52:13 - INFO - División realizada correctamente. a=10, b=2, resultado=5.0
+2026-07-19 09:52:13 - INFO - Promedio calculado correctamente. cantidad=3, resultado=9.0
+2026-07-19 09:52:13 - INFO - Elemento obtenido correctamente. indice=1, valor=2
+2026-07-19 09:52:13 - INFO - Total de precios calculado correctamente. total=80
+2026-07-19 09:52:13 - INFO - Fin del programa
